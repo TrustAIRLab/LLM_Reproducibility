@@ -1,0 +1,107 @@
+﻿Conference,title,link
+CCS 2023,Protecting Intellectual Property of Large Language Model-Based Code Generation APIs via Watermarks,https://dl.acm.org/doi/abs/10.1145/3576915.3623120
+CCS 2023,Large Language Models for Code: Security Hardening and Adversarial Testing,https://dl.acm.org/doi/pdf/10.1145/3576915.3623175
+CCS 2024,SUB-PLAY: Adversarial Policies against Partially Observed Multi-Agent Reinforcement Learning Systems.,https://arxiv.org/pdf/2402.03741
+CCS 2024,AirGapAgent: Protecting Privacy-Conscious Conversational Agents.,https://arxiv.org/pdf/2405.05175
+CCS 2024,PLeak: Prompt Leaking Attacks against Large Language Model Applications,https://dl.acm.org/doi/pdf/10.1145/3658644.3670370
+CCS 2024,``Do Anything Now'': Characterizing and Evaluating In-The-Wild Jailbreak Prompts on Large Language Models,https://arxiv.org/pdf/2308.03825
+CCS 2024,A Causal Explainable Guardrails for Large Language Models,https://arxiv.org/pdf/2405.04160
+CCS 2024,SurrogatePrompt: Bypassing the Safety Filter of Text-to-Image Models via Substitution.,https://arxiv.org/pdf/2309.14122
+CCS 2024,Membership Inference Attacks Against In-Context Learning,https://arxiv.org/pdf/2409.01380
+CCS 2024,Unveiling the Vulnerability of Private Fine-Tuning in Split-Based Frameworks for Large Language Models: A Bidirectionally Enhanced Attack,https://arxiv.org/pdf/2409.00960
+CCS 2024,Optimization-based Prompt Injection Attack to LLM-as-a-Judge.,https://arxiv.org/pdf/2403.17710
+CCS 2024,Demystifying RCE Vulnerabilities in LLM-Integrated Apps.,https://dl.acm.org/doi/pdf/10.1145/3658644.3690338
+CCS 2024,PromSec: Prompt Optimization for Secure Generation of Functional Source Code with Large Language Models (LLMs),https://dl.acm.org/doi/pdf/10.1145/3658644.3690298
+CCS 2024,Legilimens: Practical and Unified Content Moderation for Large Language Model Services,https://arxiv.org/pdf/2408.15488
+CCS 2024,The Janus Interface: How Fine-Tuning in Large Language Models Amplifies the Privacy Risks,https://dl.acm.org/doi/pdf/10.1145/3658644.3690325
+CCS 2025 (R1),RAG-WM: An Efficient Black-Box Watermarking Approach for Retrieval-Augmented Generation of Large Language Models,https://arxiv.org/pdf/2501.05249
+CCS 2025 (R1),Prompt Inference Attack on Distributed Large Language Model Inference Frameworks,https://arxiv.org/pdf/2503.09291
+NDSS 2024,MASTERKEY: Automated Jailbreaking of Large Language Model Chatbots,https://arxiv.org/pdf/2307.08715
+NDSS 2024,Improving the Robustness of Transformer-based Large Language Models with Dynamic Attention.,https://arxiv.org/pdf/2311.17400
+NDSS 2025,The Philosopher’s Stone: Trojaning Plugins of Large Language Models,https://arxiv.org/pdf/2312.00374
+NDSS 2025,TrajDeleter: Enabling Trajectory Forgetting in Offline Reinforcement Learning Agents,https://arxiv.org/pdf/2404.12530
+NDSS 2025,I know what you MEME! Understanding and Detecting Harmful Memes with Multimodal Large Language Models,https://www.ndss-symposium.org/wp-content/uploads/2025-415-paper.pdf
+NDSS 2025,Safety Misalignment Against Large Language Models,https://www.ndss-symposium.org/wp-content/uploads/2025-1089-paper.pdf
+NDSS 2025,I Know What You Asked: Prompt Leakage via KV-Cache Sharing in Multi-Tenant LLM Serving,https://yinqian.org/papers/ndss25b.pdf
+NDSS 2025,IsolateGPT: An Execution Isolation Architecture for LLM-Based Agentic Systems,https://arxiv.org/pdf/2403.04960
+USENIX Sec 24,Don't Listen To Me: Understanding and Exploring Jailbreak Prompts of Large Language Models,https://www.usenix.org/system/files/usenixsecurity24-yu-zhiyuan.pdf
+USENIX Sec 24,EaTVul: ChatGPT-based Evasion Attack Against Software Vulnerability Detection.,https://www.usenix.org/system/files/usenixsecurity24-liu-shigang.pdf
+USENIX Sec 24,REMARK-LLM: A Robust and Efficient Watermarking Framework for Generative Large Language Models.,https://www.usenix.org/system/files/usenixsecurity24-zhang-ruisi.pdf
+USENIX Sec 24,Did the Neurons Read your Book? Document-level Membership Inference for Large Language Models.,https://www.usenix.org/system/files/usenixsecurity24-meeus.pdf
+USENIX Sec 24,LLM-Fuzzer: Scaling Assessment of Large Language Model Jailbreaks.,https://www.usenix.org/system/files/usenixsecurity24-yu-jiahao.pdf
+USENIX Sec 24,An LLM-Assisted Easy-to-Trigger Backdoor Attack on Code Completion Models: Injecting Disguised Vulnerabilities against Strong Detection.,https://www.usenix.org/system/files/usenixsecurity24-yan.pdf
+USENIX Sec 24,Instruction Backdoor Attacks Against Customized LLMs.,https://www.usenix.org/system/files/usenixsecurity24-zhang-rui.pdf
+USENIX Sec 24,Formalizing and Benchmarking Prompt Injection Attacks and Defenses.,https://www.usenix.org/system/files/usenixsecurity24-liu-yupei.pdf
+USENIX Sec 24,Quantifying Privacy Risks of Prompts in Visual Prompt Learning.,https://www.usenix.org/system/files/usenixsecurity24-wu-yixin.pdf
+USENIX Sec 24,Prompt Stealing Attacks Against Text-to-Image Generation Models.,https://www.usenix.org/system/files/usenixsecurity24-shen-xinyue.pdf
+USENIX Sec 24,Making Them Ask and Answer: Jailbreaking Large Language Models in Few Queries via Disguise and Reconstruction,https://www.usenix.org/system/files/usenixsecurity24-liu-tong.pdf
+USENIX Sec 25 (R1),PAPILLON: Efficient and Stealthy Fuzz Testing-Powered Jailbreaks for LLMs,https://www.usenix.org/system/files/conference/usenixsecurity25/sec25cycle1-prepub-20-gong-xueluan.pdf
+USENIX Sec 25 (R1),Evaluating LLM-based Personal Information Extraction and Countermeasures,https://www.usenix.org/conference/usenixsecurity25/presentation/liu-yupei
+USENIX Sec 25 (R1),LLMmap: Fingerprinting for Large Language Models,https://www.usenix.org/conference/usenixsecurity25/presentation/pasquini
+USENIX Sec 25 (R1),SelfDefend: LLMs Can Defend Themselves against Jailbreaking in a Practical Manner,https://www.usenix.org/conference/usenixsecurity25/presentation/wang-xunguang
+USENIX Sec 25 (R1),We Have a Package for You! A Comprehensive Analysis of Package Hallucinations by Code Generating LLMs,https://www.usenix.org/conference/usenixsecurity25/presentation/spracklen
+USENIX Sec 25 (R1),Whispering Under the Eaves: Protecting User Privacy Against Commercial and LLM-powered Automatic Speech Recognition Systems,https://www.usenix.org/system/files/conference/usenixsecurity25/sec25cycle1-prepub-743-jin-weifei.pdf
+USENIX Sec 25 (R1),"Great, Now Write an Article About That: The Crescendo Multi-Turn LLM Jailbreak Attack",https://arxiv.org/pdf/2404.01833
+USENIX Sec 25 (R1),When LLMs Go Online: The Emerging Threat of Web-Enabled LLMs,https://arxiv.org/pdf/2410.14569
+USENIX Sec 25 (R1),HateBench: Benchmarking Hate Speech Detectors on LLM-Generated Content and Hate Campaigns,https://arxiv.org/pdf/2501.16750
+USENIX Sec 25 (R1),PoisonedRAG: Knowledge Corruption Attacks to Retrieval-Augmented Generation of Large Language Models,https://arxiv.org/pdf/2402.07867
+USENIX Sec 25 (R1),JBShield: Defending Large Language Models from Jailbreak Attacks through Activated Concept Analysis and Manipulation,https://arxiv.org/pdf/2502.07557
+USENIX Sec 25 (R1),Generated Data with Fake Privacy: Hidden Dangers of Fine-tuning Large Language Models on Generated Data,https://arxiv.org/pdf/2409.11423
+USENIX Sec 25 (R1),Towards Label-Only Membership Inference Attack against Pre-trained Large Language Models,https://www.usenix.org/system/files/conference/usenixsecurity25/sec25cycle1-prepub-1107-he.pdf
+USENIX Sec 25 (R1),Mirage in the Eyes: Hallucination Attack on Multi-modal Large Language Models with Only Attention Sink,https://arxiv.org/pdf/2501.15269
+Oakland 24,You Only Prompt Once: On the Capabilities of Prompt Learning on Large Language Models to Tackle Toxic Content.,https://arxiv.org/pdf/2308.05596
+Oakland 24,On Large Language Models' Resilience to Coercive Interrogation.,https://www.cs.purdue.edu/homes/cheng535/static/papers/sp24_lint.pdf
+Oakland 24,PromptCARE: Prompt Copyright Protection by Watermark Injection and Verification,https://arxiv.org/pdf/2308.02816
+Oakland 24,SneakyPrompt: Jailbreaking Text-to-image Generative Models.,https://arxiv.org/pdf/2305.12082
+Oakland 25,Supporting Human Raters with the Detection of Harmful Content using Large Language Models.,https://arxiv.org/pdf/2406.12800
+Oakland 25,BAIT: Large Language Model Backdoor Scanning by Inverting Attack Target.,https://www.cs.purdue.edu/homes/an93/static/papers/SP25_Shen.pdf
+Oakland 25,Comet: Accelerating Private Inference for Large Language Model by Predicting Activation Sparsity .,https://arxiv.org/pdf/2505.07239
+Oakland 25,Prompt Inversion Attack against Collaborative Inference of Large Language Models.,https://arxiv.org/pdf/2503.09022
+Oakland 25,Alleviating the Fear of Losing Alignment in LLM Fine-tuning.,https://arxiv.org/pdf/2504.09757
+Oakland 25,Fun-tuning: Characterizing the Vulnerability of Proprietary LLMs to Optimization-based Prompt Injection Attacks via the Fine-Tuning Interface.,https://www.earlence.com/assets/papers/funtuning-labunets-sp25.pdf
+Oakland 25,Fuzz-Testing Meets LLM-Based Agents: An Automated and Efficient Framework for Jailbreaking Text-To-Image Generation Models .,https://csdl-downloads.ieeecomputer.org/proceedings/sp/2025/2236/00/223600a336.pdf?Expires=1750022001\&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9jc2RsLWRvd25sb2Fkcy5pZWVlY29tcHV0ZXIub3JnL3Byb2NlZWRpbmdzL3NwLzIwMjUvMjIzNi8wMC8yMjM2MDBhMzM2LnBkZiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc1MDAyMjAwMX19fV19\&Signature=nnOvoQ~UWVpErdUt~fXsF2Vfag40e2Bsd90bQSjfbGwyy1WlhAy60fvlfAaHtpTPSb-Q9TGCJPZy2GFzIFJ4NA7RQ4RCfDRfleK0mHIDDP5W-xbK8DPl8y7OpjWACRpzZx42C2agkp--vohb1cZNW0dZI5SGEOXwmZphRQR7aJpqUrkC6kBDOE7FK1dMU7hriyogH5L4c2FCqGhDXic5-kUA~n1rST302fV~s6qFxlOyntgOyxyoVgW8TORS0hT34S2X3yANvjlAKHMmjmmo2oXi2TBfZCcXKdGRTYPKyzbQAh-q1TaPkI44jaVeRBbI~F0RV4ESjAZfCky0Z7Rffg__\&Key-Pair-Id=K12PMWTCQBDMDT
+Oakland 25,Modifier Unlocked: Jailbreaking Text-to-Image Models Through Prompts.,https://www.computer.org/csdl/proceedings-article/sp/2025/223600a355/26EkESqqGlO
+Oakland 25,On the Effectiveness of Prompt Stealing Attacks on In-The-Wild Prompts.,https://yangzhangalmo.github.io/papers/SP25-PromptStealing.pdf
+Oakland 25,DataSentinel: A Game-Theoretic Detection of Prompt Injection Attacks,https://arxiv.org/pdf/2504.11358
+USENIX Security 2025 (R2),Are CAPTCHAs Still Bot-hard? Generalized Visual CAPTCHA Solving with Agentic Vision Language Model,https://www.usenix.org/conference/usenixsecurity25/presentation/teoh
+USENIX Security 2025 (R2),Make Agent Defeat Agent: Automatic Detection of Taint-Style Vulnerabilities in LLM-based Agents,https://www.usenix.org/conference/usenixsecurity25/presentation/liu-fengyu
+USENIX Security 2025 (R2),GradEscape: A Gradient-Based Evader Against AI-Generated Text Detectors,https://www.usenix.org/conference/usenixsecurity25/presentation/meng
+USENIX Security 2025 (R2),Provably Robust Multi-bit Watermarking for AI-generated Text,https://www.usenix.org/conference/usenixsecurity25/presentation/qu-watermarking
+USENIX Security 2025 (R2),EmbedX: Embedding-Based Cross-Trigger Backdoor Attack Against Large Language Models,https://www.usenix.org/conference/usenixsecurity25/presentation/yan-nan
+USENIX Security 2025 (R2),Mind the Inconspicuous: Revealing the Hidden Weakness in Aligned LLMs' Refusal Boundaries,https://www.usenix.org/conference/usenixsecurity25/presentation/yu-jiahao
+USENIX Security 2025 (R2),Game of Arrows: On the (In-)Security of Weight Obfuscation for On-Device TEE-Shielded LLM Partition Algorithms,https://www.usenix.org/conference/usenixsecurity25/presentation/wang-pengli
+USENIX Security 2025 (R2),Refusal Is Not an Option: Unlearning Safety Alignment of Large Language Models,https://www.usenix.org/conference/usenixsecurity25/presentation/song-minkyoo
+USENIX Security 2025 (R2),Activation Approximations Can Incur Safety Vulnerabilities in Aligned LLMs: Comprehensive Analysis and Defense,https://www.usenix.org/conference/usenixsecurity25/presentation/zhang-jiawen
+USENIX Security 2025 (R2),Unlocking the Power of Differentially Private Zeroth-order Optimization for Fine-tuning LLMs,https://www.usenix.org/conference/usenixsecurity25/presentation/bao-ergute
+USENIX Security 2025 (R2),Membership Inference Attacks Against Vision-Language Models,https://www.usenix.org/conference/usenixsecurity25/presentation/hu-yuke
+USENIX Security 2025 (R2),Depth Gives a False Sense of Privacy: LLM Internal States Inversion,http://usenix.org/conference/usenixsecurity25/presentation/dong-tian
+USENIX Security 2025 (R2),I Know What You Said: Unveiling Hardware Cache Side-Channels in Local Large Language Model Inference,https://www.usenix.org/conference/usenixsecurity25/presentation/gao-zibo
+USENIX Security 2025 (R2),Big Help or Big Brother? Auditing Tracking, Profiling, and Personalization in Generative AI Assistants,https://www.usenix.org/conference/usenixsecurity25/presentation/vekaria
+USENIX Security 2025 (R2),Data-Free Model-Related Attacks: Unleashing the Potential of Generative AI,http://usenix.org/conference/usenixsecurity25/presentation/ye-attacks
+USENIX Security 2025 (R2),PRSA: Prompt Stealing Attacks against Real-World Prompt Services,https://www.usenix.org/conference/usenixsecurity25/presentation/yang-yong
+USENIX Security 2025 (R2),Cross-Modal Prompt Inversion: Unifying Threats to Text and Image Generative AI Models,https://www.usenix.org/conference/usenixsecurity25/presentation/ye-inversion
+USENIX Security 2025 (R2),Prompt Obfuscation for Large Language Models,https://www.usenix.org/conference/usenixsecurity25/presentation/pape
+USENIX Security 2025 (R2),TwinBreak: Jailbreaking LLM Security Alignments based on Twin Prompts,https://www.usenix.org/conference/usenixsecurity25/presentation/krauss
+USENIX Security 2025 (R2),Exploiting Task-Level Vulnerabilities: An Automatic Jailbreak Attack and Defense Benchmarking for LLMs,https://www.usenix.org/conference/usenixsecurity25/presentation/zhang-lan
+USENIX Security 2025 (R2),StruQ: Defending Against Prompt Injection with Structured Queries,https://www.usenix.org/conference/usenixsecurity25/presentation/chen-sizhe
+USENIX Security 2025 (R2),Machine Against the RAG: Jamming Retrieval-Augmented Generation with Blocker Documents,https://www.usenix.org/conference/usenixsecurity25/presentation/shafran
+USENIX Security 2025 (R2),Topic-FlipRAG: Topic-Orientated Adversarial Opinion Manipulation Attacks to Retrieval-Augmented Generation Models,https://www.usenix.org/conference/usenixsecurity25/presentation/gong-yuyang
+USENIX Security 2025 (R2),TracLLM: A Generic Framework for Attributing Long Context LLMs ,https://www.usenix.org/conference/usenixsecurity25/presentation/wang-yanting
+USENIX Security 2025 (R2),Unsafe LLM-Based Search: Quantitative Analysis and Mitigation of Safety Risks in AI Web Search,https://www.usenix.org/conference/usenixsecurity25/presentation/luo-zeren
+USENIX Security 2025 (R2),"Cloak, Honey, Trap: Proactive Defenses Against LLM Agents",https://www.usenix.org/conference/usenixsecurity25/presentation/ayzenshteyn
+USENIX Security 2025 (R2),Password Guessing Using Large Language Models,https://www.usenix.org/conference/usenixsecurity25/presentation/zou-yunkai
+USENIX Security 2025 (R2),SOFT: Selective Data Obfuscation for Protecting LLM Fine-tuning against Membership Inference Attacks,https://www.usenix.org/conference/usenixsecurity25/presentation/zhang-kaiyuan
+USENIX Security 2025 (R2),Effective PII Extraction from LLMs through Augmented Few-Shot Learning,https://www.usenix.org/conference/usenixsecurity25/presentation/cheng-shuai
+USENIX Security 2025 (R2),Private Investigator: Extracting Personally Identifiable Information from Large Language Models Using Optimized Prompts,https://www.usenix.org/conference/usenixsecurity25/presentation/keum
+USENIX Security 2025 (R2),PrivacyXray: Detecting Privacy Breaches in LLMs through Semantic Consistency and Probability Certainty,https://www.usenix.org/conference/usenixsecurity25/presentation/he-jinwen
+USENIX Security 2025 (R2),Malicious LLM-Based Conversational AI Makes Users Reveal Personal Information,https://www.usenix.org/conference/usenixsecurity25/presentation/zhan
+USENIX Security 2025 (R2),EchoLLM: LLM-Augmented Acoustic Eavesdropping Attack on Bone Conduction Headphones with mmWave Radar,https://www.usenix.org/conference/usenixsecurity25/presentation/yao-xin
+CCS 2025 (R2),Give LLMs a Security Course: Securing Retrieval-Augmented Code Generation via Knowledge Injection,https://arxiv.org/abs/2504.16429
+CCS 2025 (R2),Can Personal Health Information Be Secured in LLM? Privacy Attack and Defense in the Medical Domain,Pdf
+CCS 2025 (R2),You Can't Steal Nothing: Mitigating Prompt Leakages in LLMs via System Vectors,https://ui.adsabs.harvard.edu/abs/2025arXiv250921884C/abstract
+CCS 2025 (R2),MoEcho: Exploiting Side-Channel Attacks to Compromise User Privacy in Mixture-of-Experts LLMs,https://ui.adsabs.harvard.edu/abs/2025arXiv250815036D/abstract
+CCS 2025 (R2),PreferCare: Preference Dataset Copyright Protection in LLM Alignment by Watermark Injection and verification,Pdf
+CCS 2025 (R2),Security-Aware Sensor Fusion with MATE: the Multi-Agent Trust Estimator,https://ui.adsabs.harvard.edu/abs/2025arXiv250304954H/abstract
+CCS 2025 (R2),AgentSentinel: An End-to-End and Real-Time Security Defense Framework for Computer-Use Agents,https://ui.adsabs.harvard.edu/abs/2025arXiv250907764H/abstract
+CCS 2025 (R2),FlippedRAG: Black-Box Opinion Manipulation Attacks to Retrieval-Augmented Generation of Large Language Models,https://arxiv.org/abs/2501.02968
+CCS 2025 (R2),YouthSafe: A Youth-Centric Safety Benchmark and Safeguard Model for Large Language Models,https://ui.adsabs.harvard.edu/abs/2025arXiv250908997Y/abstract
