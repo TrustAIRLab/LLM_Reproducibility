@@ -1,0 +1,565 @@
+﻿Conference,Type I,Type II,comments,Models,Setup time,Execution Time,Debug time,official,results,readme,Usability,result matching,experiment setup,Comments
+CCS 2023,defense,model extraction,,CodeGen 350M,1-0.5 hr,4 hr,No more than 2 hrs,"Defense mode: 85.4%
+
+Attack mode: 35.3%","SVEN(sec)=88.0, SVEN(vul)=35.8",8,"4,5","6,5",7,"1. For determinism, you can set the temperature as 0 to get a determined result, cause the temperature is set to 0.4, it is acceptable that real result is not as same as the official one. It uses codegen as the basic model, not sure if it is easy to adopt to other llm.
+
+2. There was no requirement to configure the C programming environment, which led to all C code generation failures. This is also a major reason for the significant differences in the experimental results."
+CCS 2024,attack,others,Maximizing the reduction of victim’s performance on a specific MARL task.,,1.5,2.5 hr,0.5h,0.196,0.347,"4,5",2,"3,5","4,5",
+CCS 2024,attack,adversarial prompt attacks,,Lamma,0,< 2hr,0,,,3,3,1,3,"Time out, stuck more than 12 hrs"
+CCS 2024,attack,jailbreak,,GPT-4,1 hr,1 hr,2 hr,0.685,0.105,8,8,3,8,could not adjust dolly well in 2 hours. Eventually use gpt-4 to test.
+CCS 2024,attack,others,Data reconstruction when using SL to fine-tune LLMs,,2,,,,,8,3,1,1,The environment conflict in requirements.txt.
+CCS 2024,attack,prompt injection,,Open-source llm,1.5 hr,0,<2 hr,,,6,3,1,6,FileNotFoundError: [Errno 2] No such file or directory: ‘../../dataset/data_for_train/basic//_train_llmbar.csv'
+CCS 2024,attack,others,Identifying RCEs in LLM frameworks such as langchain,Gpt-3.5-turbo,1 hr,1.5 hr,1 hr,51,44,6,6,6,10,"To run the code in macOS, need to replace all os.popen(f""pycg {init_suspect_file}"").read()
+
+ by os.popen(f""python -m pycg {init_suspect_file}”).read() in the code.  Need install openai==0.28.1
+
+# of call chains  found by LLMSmith is shown below
+
+6/11 framework results are consistent with the results in the paper"
+CCS 2024,defense,hallucination,,GPT 3.5 turbo & GPT4o,10 mins,1.5 hr,0.5 hr,"216 -> 7 
+
+(96.76% resolved)","216 -> 13 
+
+(93.98% resolved)",6,10,10,10,"To run the code, need to change 
+
+security_loss_before = calculate_vcs(*ci*)
+
+        security_loss_after = calculate_vcs(*ci_hat*)
+
+ To 
+
+security_loss_before = calculate_vcs(*ci*)[0]
+
+        security_loss_after = calculate_vcs(*ci_hat*)[0]"
+CCS 2024,defense,jailbreak,,Llama2; ChatGLM3; Falcon; Dolly; Vicuna,/,/,/,/,/,6,3,1,1,"Non functional, sepend more that 2 hrs to set up"
+CCS 2024,attack,memorization,,GPT-2,/,/,/,/,/,3,1,1,3,"1. It lacks a working pipeline, minimal documentation, and stable environment configuration.
+
+2. Torch version conflict (README restricts to <2.0, but code requires >=2.1); source code relies on unregistered module paths (pii_leakage) without documentation"
+CCS 2025 (R1),defense,model extraction,,,/,/,/,/,/,1,1,1,1,The code incomplete
+NDSS 2024,attack,jailbreak,,"GPT4o,GPT-3.5, GPT-4, Bard, Bing",0,0,1,/,/,8,6,1,3,"1. I installed openai==1.34 as instructed, but it showed API incompatibility. Then I downgraded to openai==0.28, and it was still incompatible…
+
+2. Fail to run the experiment. Cause there is no script to conduct the experiment, and the evaluation part is done manually, which we not able to conduct."
+NDSS 2024,defense,adversarial prompt attacks,,"BERT-large-cased, GPT-2, T5-based",1,0,1,/,/,3,3,1,3,"Can not download the dataset.The Google Drive link is no longer working.
+
+Use the command in the readme.md, but find the error „ValueError: Some specified arguments are not used by the HfArgumentParser: ['--task_name', ‚sa‘]“
+
+We don’t know how to solve it."
+NDSS 2025,attack,backdoor,,"Llama models(7B, 13B, 33B)",0.5,,,,,6,3,1,3,"Use the command in the readme.md, but find the error „ValueError: Some specified arguments are not used by the HfArgumentParser: ['--task_name', ‚sa‘]“
+
+We don’t know how to solve it."
+NDSS 2025,defense,memorization,,,,,< 2,/,/,6,1,1,1,cannot find -lGL
+NDSS 2025,attack,evasion of guardrails,,,1,1.58,0.58,"ASR 0.833
+
+ACC 0.674","ASR 0.815
+
+ACC 0.667",8,8,10,8,
+NDSS 2025,defense,prompt injection,,LlamaIndex，LangChain,0.91,/,1.33,/,/,6,8,1,3,No test dataset
+USENIX Sec 24,attack,jailbreak,,"gpt-3.5-turbo, gpt4, PaLM2",10m,2h,0.5 hr,0.95 EMH 0.290 JSR (ALL Categories/ Hybrid Strategies),0.947 EMH 0.287 JSR (ALL Categories/ Hybrid Strategies),10,10,10,10,"The experimental part involves manually annotating LLM responses and cannot be reproduced. Using the official annotation results, we can get the results consistent with the official results provided in paper. In addition, PaLM2 may not be available anymore."
+USENIX Sec 24,attack,adversarial prompt attacks,,Gpt,/,/,/,/,"Attack Success Rate: 83% (snippet size = 2) 
+
+100% (snippet size=4)",6,3,1,1,"Time out, stuck more than 12 hrs"
+USENIX Sec 24,defense,model extraction,,T5-base,0.5 hr,> 12,0.5 hr,"Watermark Extraction Rate (WER): 96.98 %
+
+Bert score: 0.91
+
+Blue4 score: 0.30","Watermark Extraction Rate (WER): 
+
+84.3375748502994 %
+
+Bert score:  0.8919776285479882
+
+Blue4 score:  0.24469038892450923",6,8,8,10,"The official repository does not provide a pre-trained model, and training from scratch locally (for 300 epochs) takes over 100 hours. The performance results after 5 epochs of training are recorded in the table."
+USENIX Sec 24,attack,memorization,MIA,OpenLLaMA,/,/,/,/,/,6,3,1,1,"1. The download_model.sh script contains hardcoded file paths that only work on the original author's machine 
+
+2. the repository is missing the import_model.py file that the script depends on"
+USENIX Sec 24,attack,jailbreak,,"gpt-3.5-turbo, Llama-2-7b-chat-hf,RoBERTa-large",2h,0.2 hr,1h,90%,1%,6,3,1,6,"1. Hugging Face gated model (LLaMA-2-7b-chat-hf) access denied due to missing token login. 
+
+2. Encountered CUDA out of memory error when loading LLaMA-2-7B via vLLM. Resolved by explicitly setting gpu_memory_utilization=0.8 in example.ipynb when initializing LocalVLLM.(A100,80GB) 
+
+3. fixed RoBERTaPredictor(device='cuda:1') error by changing to cuda:0."
+USENIX Sec 24,attack,backdoor,,CodeGen,0.5h,,,,,6,3,1,6,"Fail at step1 LLM-assisted malicious payload crafting
+
+python3 main_revised.py
+
+FileNotFoundError: [Errno 2] No such file or directory: ‚Example_Transformation/CA/disabled-cert-validation.txt’"
+USENIX Sec 24,attack,backdoor,,"meta-llama/Llama-2-7b-chat-hf
+
+mistralai/Mistral-7B-Instruct-v0.2
+
+mistralai/Mixtral-8x7B-Instruct-v0.1",0.5,1.33,0.33,"Word: AG News ASR = 98.90%
+
+Syntax: AG News Acc = 86.40%，ASR = 91.60%
+
+Semantic:DBpedia Acc = 92.50%，ASR = 100.00%","Word: AG News ASR = 96.98%
+
+Syntax: AG News Acc = 86.45%，ASR = 90.00%
+
+Semantic:DBpedia Acc = 90.77%，ASR = 100.00%",6,6,8,6,All three attacks achieve high ASR with low query cost while maintaining good clean accuracy.
+USENIX Sec 24,attack,prompt injection,Both attack and defence,"Llama
+
+Flan-UL2, PaLM-2",1,2,,,,6,3,1,3,"Project successfully started and running, but encountered CUDA device mismatch errors.
+
+GPU device mismatch error"
+USENIX Sec 24,attack,memorization,,"vision models, including ResNet-18, BiT-M, ViT-B",/,/,/,,,6,3,1,6,"provided a raw model, runtime more than 12 hrs"
+USENIX Sec 24,attack,others,Prompt stealing,None,0.5,0,2 hrs,,,8,6,1,6,Comment: error: `cargo rustc --lib --message-format=json-render-diagnostics --manifest-path Cargo.toml --release -v --features pyo3/extension-module --crate-type cdylib --` failed with code 101
+USENIX Sec 24,attack,jailbreak,,"Vicuna, LLAMA, GPT family",2,5,2,,,8,6,1,6,"Debug more than 2 hrs
+
+RuntimeError: Failed to import transformers.generation.utils because of the following error (look up to see its traceback):
+
+cannot import name 'split_torch_state_dict_into_shards' from 'huggingface_hub' (/home/c01yele/CISPA-az6/metaml-2024/envs/dora_project/DRA/lib/python3.9/site-packages/huggingface_hub/__init__.py)"
+USENIX Sec 25 (R1),attack,jailbreak,,"Vicuna-7B-v1.3
+
+Llama-2-7B-chat
+
+Baichuan2-7B
+
+Guanaco-7B
+
+GPT-3.5 turbo
+
+GPT-4
+
+Gemini-Pro",0.5,12,1,"Attack Success Rate(ASR):
+
+Vicuna-7B-v1.3: 100%
+
+Llama-2-7B-chat: 58%
+
+Baichuan2-7B: 100%
+
+Guanaco-7B: 98%
+
+GPT-3.5 turbo:90%
+
+GPT-4:80%
+
+Gemini-Pro:82%","Attack Success Rate(ASR):
+
+Vicuna-7B-v1.3: 100%
+
+Llama-2-7B-chat: (stuck for over 48 hours)
+
+Baichuan2-7B: 100%
+
+Guanaco-7B: (Fail to reproduce)
+
+GPT-3.5 turbo:92%
+
+GPT-4:77.59%
+
+Gemini-Pro: (Not Available)",8,8,10,10,Guanaco-7B failed to run due to missing config.json
+USENIX Sec 25 (R1),defense,others,PII,"GPT4 
+
+GPT3.5
+
+PaLM 2
+
+Vicuna-13b
+
+Vicuna-7b
+
+Llama-2-7b
+
+InternLM-7b",10 min,2,10 mins,"Emailaddr.  100%/1.00 
+
+Tel.  98%/0.98
+
+Mailaddr. 86%/0.85
+
+Name 100%/1.00
+
+Work Experience 66%/0.57
+
+Education Experience 74%/0.63
+
+Affiliation 87%/0.85
+
+Occupation 78%/0.70","Emailaddr.  100%/1.00 
+
+Tel.  99%/0.99
+
+Mailaddr. 78%/0.8095
+
+Name 98%/0.98
+
+Work Experience 64%/0.6488
+
+Education Experience 74%/0.7772
+
+Affiliation 86%/0.8805
+
+Occupation 73%/0.7859",10,10,10,10,
+USENIX Sec 25 (R1),defense,others,Property inference attack,"OpenAI (GPT series), Anthropic (Claude series):
+
+Google （Gemma series), Meta （Llama series), Microsoft （Phi-series）,Mistral AI (mistral series), CohereForAI (aya series), Qwen (qwen series)
+
+Others
+
+The paper test 42 models in total.",0.5,10 mins,10 mins,95.3% (8 queries),90.89% (8 queries),10,8,10,10,
+USENIX Sec 25 (R1),defense,jailbreak,,"LLaMA-2（7B/13B）, Mistral-7B, GPT-3.5",2 hr,/,/,/,/,3,1,1,1,Multiple environment-related bugs: 1. model loading fails due to .to() on offloaded weights(in root/Code/model/hugging_face_llm.py #L20)  2.OpenAI SDK version mismatch (1.x vs <1.0)
+USENIX Sec 25 (R1),defense,hallucination,,/,/,/,/,/,/,5,3,1,3,
+USENIX Sec 25 (R1),defense,others,Evasion attack,"Whisper-large-v3, VITS (pretrained_vctk), DeepSpeech2",1,3,2,,,6,3,1,3,"DeepSpeech2 checkpoint links dead, so training/batch eval blocked"
+USENIX Sec 25 (R1),attack,jailbreak,,"GPT-4
+
+GPT-3.5
+
+Gemini-Pro
+
+Llama-2 70b
+
+Claude-3",/,/,/,/,/,3,1,1,1,"The code for this paper is included in Microsoft’s PyRIT, but it is incomplete and cannot be used to reproduce the experiments reported in the paper."
+USENIX Sec 25 (R1),attack,prompt injection,,"GPT-4o
+
+Claude-3.5
+
+Gemini-1.5-flash",/,/,/,/,/,3,1,1,1,"code is incomplete and does not include the core parts needed for reproduction, so the project cannot be reproduced."
+USENIX Sec 25 (R1),defense,others,Content safety,,1.5,,4,"0,975","0,975",10,10,10,8,
+USENIX Sec 25 (R1),attack,data poisoning,,"PaLM 2 
+
+GPT-3.5 
+
+GPT-4 
+
+LLaMa-2-7B 
+
+LLaMa-2-13B 
+
+Vicuna-7B 
+
+Vicuna-13B 
+
+Vicuna-33B",0.16,1,0.16,"GPT-4 (black-box) ASR
+
+Dataset: 
+
+NQ 0.97
+
+HotpotQA 0.93
+
+MS-MARCO 0.92","GPT-4 (black-box) ASR
+
+Dataset: 
+
+NQ 0.98
+
+HotpotQA 0.95
+
+MS-MARCO 0.92",10,10,10,10,
+USENIX Sec 25 (R1),defense,jailbreak,,"Mistral-7B 
+
+Vicuna-7B 
+
+Vicuna-13B 
+
+Llama2-7B 
+
+Llama3-8B",0.5,20,0.5,"IJP     0.84/0.86
+
+GCG     0.97/0.97
+
+SAA     0.99/0.99
+
+AutoDAN     0.97/0.97
+
+PAIR     0.84/0.86
+
+DrAttack     0.82/0.80
+
+Puzzler     1.00/1.00
+
+Zulu     0.99/0.99
+
+Base64   0.99/0.99","IJP     0.83/0.85
+
+GCG     0.96/0.95
+
+SAA     0.99/0.99
+
+AutoDAN     0.97/0.97
+
+PAIR     0.83/0.85
+
+DrAttack     0.82/0.80
+
+Puzzler     1.00/1.00
+
+Zulu     0.99/0.99
+
+Base64   0.99/0.99",10,10,10,10,
+USENIX Sec 25 (R1),attack,data poisoning,memorization，also has defense,"Pythia-410m
+
+Pythia-1.4b
+
+Pythia-2.8b
+
+Pythia-6.9b",0.5,20,0.5,"For Pythia-1.4b, the number of successful Personally Identifiable Information (PII) extractions after fine-tuning: 53, increase rate is about 29.27%","For Pythia-1.4b, the number of successful Personally Identifiable Information (PII) extractions after fine-tuning: 53, increase rate is about 29.27%",10,10,10,10,
+USENIX Sec 25 (R1),attack,memorization,,"LLaMA2-13B
+
+Falcon-7B 
+
+Pythia-6.9B
+
+OPT-6.7B
+
+Gemini-1.5-Flash
+
+GPT-3.5-Turbo-Instruct",0.2,5,0.16,"OFFICIAL (Pythia-6.9B):
+
+AUC: 0.64 
+
+Balanced Accuracy: 0.62
+
+TPR@1%FPR: 4.9%","REPRODUCED (Pythia-6.9B):
+
+AUC: 0.6359 
+
+Balanced Accuracy: 0.6184
+
+TPR@1%FPR: 4.85%",10,10,10,10,
+USENIX Sec 25 (R1),attack,hallucination,,"InstructBLIP 
+
+MiniGPT-4 
+
+LLaVA-1.5 
+
+Shikra
+
+mPLUG-Owl
+
+Qwen-VL
+
+GPT-4o
+
+Gemini 1.5",>2,0,0,/,/,10,1,1,1,Spend more than 2 hrs to set up
+Oakland 24,defense,evasion of guardrails,,"GPT-2, t5",2 hrs,0.1 hr,2 hrs,Task1-Model:T5-S-HateXplain-F1:0.716  Task1-Model:T5-S-HateXplain-acc:0.734,Task1-Model:T5-S-HateXplain-F1:0.751 Task1-Model:T5-S-HateXplain-acc:0.748,8,8,8,8,"1.  The folder sfs_out/task1/ is missing and must be manually created. Otherwise, the code fails with a FileNotFoundError at the first execution step. 2. The original environment.yaml file contains a version conflict: protobuf==4.25.1 is incompatible with google-api-core and tensorboardx. To fix this, remove the protobuf version constraint from the YAML file and install a compatible version manually via pip install protobuf==3.20.3."
+Oakland 24,attack,jailbreak,,"Llama-2-7b-chat-hf,Llama-2-13b-chat-hf,Llama-2-70b-chat-hf,",1 hr,2 hrs,"0,16 hr",,,6,6,1,1,"1. You need to log in to Hugging Face (huggingface-cli login) to access LLaMA-2, but this step is missing from the README. 2. The repo supports single-question testing, but lacks batch scripts to fully reproduce reported metrics. 3. No evaluation script is provided to calculate ASR or other metrics. 4. The code runs on A100 (80GB), but causes OOM errors on 3090 (24GB)."
+Oakland 24,defense,others,Prompt extraction,"BERT
+
+RoBERT
+
+OPT-1.3b
+
+LLaMA-3b, LLaMA-7b, andLLaMA-13b （only for case study）",2,0,0,"Method: AUTOPROMPT
+
+Model:RoBERTa 
+
+Dataset: SST2
+
+P-value：5.43×10^-2 for Independent Prompt; 1.0 for Unauthorised Prompt",,8,6,1,1,Code is non-functional
+Oakland 24,attack,jailbreak,,"Stable Diffusion 1.4
+
+DALLE 2",,,,,,8,3,1,1,The dataset used in this paper is not provided. Hence it’s impossible to reproduce the paper.
+Oakland 25,defense,backdoor,,"LLaMA2-7B 
+
+LLaMA3-8B
+
+Mistral-7B 
+
+Gemma-7B",>2,0,0,"Precision: 1.000
+
+Recall: 0.900
+
+F1-Score: 0.947
+
+ROC-AUC: 0.950
+
+Overheads: 1425.775",/,10,8,1,1,Spend more than 2 hrs to set up
+Oakland 25,attack,prompt injection,,huggyllama/llama-65b,More than 3 hrs,/,/,/,/,6,6,1,1,"1. The 65B model causes OOM errors on both A100 and B200 GPUs, even after attempting precision reduction and parameter tuning. 2. Switching to a llama 7B model results in IndexError: list index out of range at hidden_state_list[0], suggesting that smaller models are not properly supported. 3. The project does not provide fallback options or compatibility guidance for different model sizes. 4. The --base-model-name argument in README provides an invalid model name (meta-llama/Llama-2-70b), which does not match Hugging Face naming conventions."
+Oakland 25,defense,others,Enforcing safety alignment during fine-tuning,"Qwen1.5-7B-Chat,Qwen2.5-7B-Instruct",1,3,2,Harmfulness rate reduction ~50 percentage points (from ~52-57% down to ~3%),"Harmfulness rate reduction: 2.7 percentage points (from 55.6% to 52.9%, Step 20)",6,3,3,3,
+Oakland 25,attack,others,Prompt stealing,GPT family,2,,2,,,8,3,1,6,"Debug more than 2 hrs
+
+Comment: ValueError: pooling_task must be one of ['embed'].
+
+ERROR 10-24 12:36:31 [core_client.py:564] Engine core proc EngineCore_DP0 died unexpectedly, shutting down client."
+Oakland 25,defense,prompt injection,,"gpt-4.1, Meta-Llama-3-8B-Instruct, palm2",,,,,,8,6,1,6,code runs over 48 hours without producing result
+USENIX Security 2025 (R2),attack,others,CAPTCHA solver,GPT-4o,2,,,"Successfully solved 1,577 out of 2,600 challenges, achieving a solve rate of 60.7%.",,6,8,1,3,Spend more than 2 hrs to set up
+USENIX Security 2025 (R2),attack,adversarial prompt attacks,Malicious prompt leads to code exec,GPT-4o,2,,,34 high-risk vulnerabilities in 20 agent applications,,10,8,1,3,Spend more than 2 hrs to set up
+USENIX Security 2025 (R2),defense,others,Program repair agent,"RoBERTa,
+
+GPT2,
+
+BERT",2,,,,,10,8,1,6,Spend more than 2 hrs to set up
+USENIX Security 2025 (R2),attack,others,watermake,llama2-7b,0.5,1,0.5,0.96,0.9500,10,10,10,10,"Method: rsbh, Model: llama-7b, Dataset: ./balance_hash/data_share/OpenGen.jsonl Parameters: n=6, k=4, m=8
+
+delta: 6.0, gamma: 0.5, T: 200                    Accuracy: 0.9500
+
+Bit accuracy: 0.9821875"
+USENIX Security 2025 (R2),attack,backdoor,,"bloom,gemma2,llama2,llama3",0.5,1.5,0.5,"loom| sst2 | mn: 96%(CTA),  100% (ASR)
+
+bloom| sst2 | gogle: 96%(CTA),  100% (ASR)
+
+bloom| sst2 | cf: 96%(CTA),  100% (ASR)","bloom| sst2 | mn: 94%(CTA),  94% (ASR)**
+
+**bloom| sst2 | gogle: 94%(CTA),  94% (ASR)**
+
+**bloom| sst2 | cf: 94%(CTA),  100% (ASR)",10,10,10,10,
+USENIX Security 2025 (R2),attack,jailbreak,,gemma-7b-it,0.5,1,,,,3,3,1,1,Comment: no requirements.txt
+USENIX Security 2025 (R2),attack,model extraction,,"BERT, GPT2, ViT",0.75,8,,"94,95 %","94,27 %",6,6,8,6,did not provide models. We should train models by ourselves.
+USENIX Security 2025 (R2),attack,evasion of guardrails,,,1,,2,,,8,6,1,6,"Spend more than 2 hr to debug
+
+huggingface_hub.errors.GatedRepoError: 401 Client Error. (Request ID: Root=1-69206fbd-38a43b2d54553d446902ad13;11d239be-071f-4577-b73f-6ccb77f33dcf)"
+USENIX Security 2025 (R2),defense,evasion of guardrails,,"Llama, Mistral, Qwen",1,,2,,,8,3,1,3,"Spend more than 2 hrs to set up
+
+Comment: File ""/home/c01yele/CISPA-az6/metaml-2024/repository/dora_project/QuadA/evaluation/utils.py"", line 223
+
+    n_samples = data.numel() // seqlen{', '.join(MODELS.__dict__.values())}
+
+                                      ^
+
+SyntaxError: invalid syntax"
+USENIX Security 2025 (R2),defense,memorization,,"RoBERTa (355M)
+
+OPT-1.3B
+
+OPT-6.7B",1,10,0.17,"Accuracy RoBERTa (SST-2 ε=2,δ=10−5 K=256): 92.7","Accuracy RoBERTa (SST-2 ε=2,δ=10−5 K=256): 92.7",9,9,9,9,
+USENIX Security 2025 (R2),attack,memorization,,"LLaVA, MiniGPT-4",2,,,,,"6,5","6,5",1,3,"More than 2 hr to setup
+
+The errors are caused by incorrect dependencies in the Conda environment file.  1. ERROR: Failed to build 'flash-attn'
+
+ModuleNotFoundError: No module named ‘torch’ 2. ERROR: Could not find a version that satisfies the requirement llava==1.0.1.      Unclear model configuration instructions
+
+It took over 20 hours to perform instruction tuning on LLaVA"
+USENIX Security 2025 (R2),attack,memorization,,"LLama-2-7B-chat
+
+Llama-3-8B-Instruct
+
+Llama-3.1-8B-Instruct
+
+Llama-3.3-70B-Instruct
+
+Qwen2.5-7B-Instruct
+
+Qwen2.5-Coder-7B-Instruct",1,,2,,,10,8,1,6,Spend more than 2 hr to debug
+USENIX Security 2025 (R2),attack,model extraction,,"Llama-2/3.1, Mistral, Phi-3.5, gemma-2",0.5,0.5,1,,,8,8,1,6,"The preset configuration only includes Intel 13900K, Intel 14900K, and Intel 12700KF. Since our server does not use any of these CPUs, we are unable to run the tests."
+USENIX Security 2025 (R2),attack,memorization,,Vicuna-13b-v1.3,1,3,0.5,"name: 1.00
+
+email: 0.59
+
+mail: 0.62
+
+phone: 0.57
+
+work: 0.69
+
+education: 0.73
+
+affiliation: 0.63
+
+occupation: 0.67","name: 1.0000
+
+email: 0.5900
+
+mail: 0.6186
+
+phone: 0.5700
+
+work: 0.6855
+
+education: 0.7338
+
+affiliation: 0.6339
+
+occupation: 0.6728",8,8,10,6,I use the same query budget: 8 queries per profile. The results closely match the official results.
+USENIX Security 2025 (R2),attack,others,Use llm to assist existing attacks,"GPT-4.0
+
+GAN, Stable Diffusion XL",0.5,6,1.5,"MNIST Model Extraction：98.1%，Agreement 97.8%
+
+MNIST Membership Inference：Accuracy 62.7%，AUC 0.52
+
+MNIST Model Inversion：Accuracy 91.2%，MSE 0.061","MNIST Model Extraction：98.20%，Agreement 99.49%
+
+MNIST Membership Inference：Accuracy 64.82%，AUC 0.493
+
+MNIST Model Inversion：Accuracy 91.4%，MSE 0.235",6,6,10,3,
+USENIX Security 2025 (R2),attack,others,Prompt stealing attack,"GPT-4
+
+GPT-3.5",0.13,10,0.13,"ASR：46.1%
+
+Prompt Similarity (GPT-4): 0.7025","ASR: 43.8%
+
+Prompt Similarity (GPT-4):0.73",10,8,10,10,
+USENIX Security 2025 (R2),attack,prompt injection,,"GPT-4
+
+Claude-3-Haiku
+
+T5
+
+DALL·E 3
+
+Stable Diffusion V1.5
+
+BLIP-2",2,,,,,8,6,1,3,Spend more than 2 hrs to set up
+USENIX Security 2025 (R2),defense,prompt injection,,Llama-3.1-8B-Instruct,0.5,1,0.5,"Soft Obfuscation: BLEU = 49.20, BERTScore = 0.912, Cosine Sim = 0.848
+
+Hard Obfuscation: BLEU = 44.22, BERTScore = 0.905, Cosine Sim = 0.835
+
+LoRA Finetuning: BLEU = 49.46, BERTScore = 0.911, Cosine Sim = 0.841","Soft Obfuscation: BLEU = 43.94, BERTScore = 0.907, Cosine Sim = 0.836
+
+Hard Obfuscation: BLEU = 22.50, BERTScore = 0.864, Cosine Sim = 0.792
+
+LoRA Finetuning: BLEU = 36.75, BERTScore = 0.891, Cosine Sim = 0.808",8,8,6,8,27 successful extractions on conventional prompt vs. 0 on obfuscated prompt (100% defense rate). Training requires 10 iterations with 800 samples.
+USENIX Security 2025 (R2),attack,jailbreak,,LLaMA 2 7B,2,1.5,1,"1%, 52%, 76%","1%, 52%, 76%",8,8,10,10,"Matches Table 4 (Val) from the paper: Unpruned = 1%, Iteration 1 = 52%, Iteration 2 = 76%
+
+Moderate efficiency. Overall runtime ~1–2 hours, dominated by LlamaGuard evaluations."
+USENIX Security 2025 (R2),defense,prompt injection,,"LLaMA-7B, Mistral-7B",2,0.5,0.5,"completion_real success rate 0.7259615384615384 / 0.5 (in-response / begin_with) on huggyllama/llama-7b_SpclSpclSpcl_None_2025-03-12-01-01-20, delimiters SpclSpclSpcl, training-attacks None, zero-shot defense isolation","Completion-Real (LLaMA, Undefended): up to 96% (reported as Max over variants)",6,6,3,3,python test.py   -m huggyllama/llama-7b_SpclSpclSpcl_None_2025-03-12-01-01-20 -a completion_real -d isolation
+USENIX Security 2025 (R2),attack,data poisoning,,Llama-2-7b-chat-hf,0.5,8,1,,,8,8,1,6,running time too long
+USENIX Security 2025 (R2),attack,data poisoning,,"Qwen, Llama",1,6,2,"0,519","0,012",8,3,1,8,"Average Top3_origin: 0.427027837197595
+
+Average Top3_attacked: 0.43194091353924274
+
+Average Top3 Δ: 0.004913076341647726
+
+Average ASR: 0.012471655328798186"
+USENIX Security 2025 (R2),attack,data poisoning,,,1.33,,2,,,8,6,1,6,"Spend more than 2 hr to debug
+
+Comment: ERROR:root:Failed to import necessary modules. Please ensure all dependencies are installed: cannot import name 'AgentExecutor' from 'langchain.agents' (/home/c01yele/CISPA-az6/metaml-2024/envs/dora_project/unsafe_llm/lib/python3.10/site-packages/langchain/agents/__init__.py)
+
+ERROR:root:You might need to install 'langchain-openai', 'langchain', 'openai', etc."
+USENIX Security 2025 (R2),defense,others,,"GPT-4o, GPT-4o-mini
+
+Gemini, Claude",0.33,0.05,0.03,100% defense success on 11 CTF machines,not reproducible from public code,6,6,1,6,Main experimental results rely on a private evaluation harness (agent-based and CTF-based) that is not released. Public code supports defense deployment but does not support reproducing reported DSR or CTF success rates.
+USENIX Security 2025 (R2),attack,others,,Qwen2.5-0.5B-Instruct,1.5,,,,,3,1,1,6,"Comment: The provided requirements.txt pins peft==0.14.0, which is incompatible with the released LoRA adapter. The adapter configuration includes a non-standard field (corda_config) that is not supported by the official PEFT API, causing runtime failure even in the authors’ specified environment."
+USENIX Security 2025 (R2),defense,memorization,,"Llama-3.2-1B
+
+Llama-3.2-3B
+
+Pythia (70M, 160M,1B,1.4B,2.8B,and6.9B)
+
+OpenLLaMA-7B
+
+GPT-4o-mini
+
+Claude-3.5",0.133,3,0.5,"AUC-ROC (ArXiv) Reproduced: 0.557
+
+TPR@1%FPR (ArXiv) Reproduced: 0.036","AUC-ROC (ArXiv) Official: 0.568 
+
+TPR@1%FPR (ArXiv) Official: 0.033","6,5","5,5",10,"6,5","Comment: The released code assumes distributed training by default (DeepSpeed + Accelerate), but lacks a stable single-GPU execution path. Running the code in a standard single-GPU, non-distributed environment leads to runtime failures due to missing MPI dependencies, CUDA version mismatches, and missing distributed environment variables (e.g., WORLD_SIZE). Significant manual code modification is required to disable distributed initialization."
+USENIX Security 2025 (R2),attack,memorization,,"GPT-3.5-turbo
+
+GPT-4o-mini",0.5,5,1,"name ASR:0.09%
+
+name, email-domain ASR:19.16%","name ASR:0.18%
+
+name, email-domain ASR:20.54%",6,6,8,3,"Total queries: 4,930. Experiment 1: 3,333 queries(0.0018 successful PII per query). Experiment 2: 1,597 queries (0.205 successful PII per query)"
+USENIX Security 2025 (R2),defense,memorization,,"GPT-Neo (125M parameters)
+
+GPT-2, Phi-2, OpenELM",0.5,4,0.5,3% (100/3333),3% (99/3333),8,6,10,8,"Each experiment generates 40,000 text samples (2,000 samples × 20 optimized prompts) with batch size 200, achieving 6.2% PII extraction rate on Enron dataset (2,473 unique emails extracted) and 1.9% on TREC dataset (750 emails)."
+USENIX Security 2025 (R2),defense,memorization,,"Mistral-7B-v0.1, Gemma-2-9b-it, Phi-3-medium, LLaMA-3-8B, Qwen2.5-14B",0.5,,2,,,3,1,1,6,"Spend more than 2 hr to debug
+
+Project lacks requirements.txt with pinned versions. Multiple version conflicts between trl/transformers/accelerate/peft packages."
+USENIX Security 2025 (R2),attack,memorization,,Llama3-8B-Instruct,0.5,1.5,0.5,none,"This is a user study involving human participants. Functional testing shows that the malicious CAI runs as expected and attempts to extract personal information using direct, reciprocal, or user-first strategies.",8,6,1,6,
+USENIX Security 2025 (R2),attack,others,,HuBERT-base + BART-Large,0.5,1,1,,,6,3,3,6,"Zenodo only provides a subset of the data, not the full test set; the audio file paths in the JSON config don't match the actual paths after extraction.
+
+Inference Speed: ~2-3s per audio sample on GPU (CUDA); Model Loading: ~10s for HuBART-L (1.4GB); EchoVAD Training: 5 epochs in ~30s (1000 samples);"
+CCS 2025 (R2),defense,prompt injection,,,2,,2,,,3,3,1,1,"The environment configuration failed, and the work could not be reproduced."
+CCS 2025 (R2),attack,data poisoning,,"Meta-Llama-3-8B-Instruct
+
+Vicuna-13b-v1.5 
+
+Mixtral-8x7B-Instruct-v0.1
+
+Qwen2.5‑Instruct‑7B
+
+GPT-2
+
+GPT-4",1,0.17,,,,6,5,1,1,"Comment:  The repository does not provide a dependency specification (e.g., requirements.txt or environment.yml). As a result, the code could not be executed in a reliable and time-bounded manner, and experimental results were not evaluated."
