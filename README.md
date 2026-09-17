@@ -1,6 +1,4 @@
-This repository accompanies our paper:
-
-**Can We Trust LLM Security Research? A Reproducibility Study of Large Language Model Security Papers in Tier-1 Security Conferences**  
+This repository accompanies our paper: **Can We Trust LLM Security Research? A Reproducibility Study of Large Language Model Security Papers in Tier-1 Security Conferences**  
 
 ## Overview
 
